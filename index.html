@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retas Pro — Support</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: #111111;
+      color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      min-height: 100vh;
+    }
+
+    /* Speed lines background */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 120px,
+        rgba(173, 235, 82, 0.03) 120px,
+        rgba(173, 235, 82, 0.03) 121px
+      );
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 48px;
+    }
+
+    .icon-wrap {
+      width: 72px;
+      height: 72px;
+      border-radius: 18px;
+      background: #1a1a1a;
+      border: 1.5px solid rgba(173, 235, 82, 0.4);
+      box-shadow: 0 0 24px rgba(173, 235, 82, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 38px;
+      flex-shrink: 0;
+    }
+
+    .header-text h1 {
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #ffffff;
+      line-height: 1;
+    }
+
+    .header-text span {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+    }
+
+    /* Accent bar */
+    .accent-bar {
+      height: 4px;
+      border-radius: 2px;
+      background: linear-gradient(to right, #ADEB52 60%, #D50032 60%, #D50032 80%, rgba(173,235,82,0.4) 80%);
+      margin-bottom: 48px;
+    }
+
+    /* Card */
+    .card {
+      background: #1a1a1a;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    }
+
+    .card h2 {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #ADEB52;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 15px;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.65);
+    }
+
+    /* Features list */
+    .features {
+      list-style: none;
+      margin-top: 12px;
+    }
+
+    .features li {
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .features li:last-child { border-bottom: none; }
+
+    .features li::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ADEB52;
+      flex-shrink: 0;
+    }
+
+    /* Contact button */
+    .contact-btn {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 14px 28px;
+      background: #ADEB52;
+      color: #111111;
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 999px;
+      box-shadow: 0 4px 20px rgba(173, 235, 82, 0.3);
+      transition: opacity 0.2s;
+    }
+
+    .contact-btn:hover { opacity: 0.85; }
+
+    /* Footer */
+    .footer {
+      margin-top: 48px;
+      text-align: center;
+      font-size: 12px;
+      color: rgba(255,255,255,0.2);
+      letter-spacing: 1px;
+    }
+
+    .footer span { color: #ADEB52; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="header">
+      <div class="icon-wrap">⚽</div>
+      <div class="header-text">
+        <h1>Retas Pro</h1>
+        <span>Support &amp; Help</span>
+      </div>
+    </div>
+
+    <div class="accent-bar"></div>
+
+    <div class="card">
+      <h2>About the App</h2>
+      <p>Retas Pro is the ultimate pickup soccer organizer. Add your teams, set the match length, and kick off. The winner stays on, the loser goes to the back of the queue — just like real retas.</p>
+    </div>
+
+    <div class="card">
+      <h2>Features</h2>
+      <ul class="features">
+        <li>Team queue with live rotation</li>
+        <li>Match timer with configurable duration</li>
+        <li>Scorekeeping with max-goals limit</li>
+        <li>Winner stays / challenger stays rules</li>
+        <li>Coin toss for tied matches</li>
+        <li>Match history log</li>
+        <li>iOS Dynamic Island live countdown</li>
+        <li>iPad support</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Contact Support</h2>
+      <p>Have a question, found a bug, or want to suggest a feature? Send us an email and we'll get back to you as soon as possible.</p>
+      <a class="contact-btn" href="mailto:alfredomgomez@gmail.com">Email Support</a>
+    </div>
+
+    <div class="footer">
+      &copy; 2026 <span>Retas Pro</span> &nbsp;·&nbsp; All rights reserved
+    </div>
+
+  </div>
+</body>
+</html>
